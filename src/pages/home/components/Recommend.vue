@@ -2,7 +2,7 @@
 <div>
     <div class="title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key='item.id'>
+        <li class="item border-bottom" v-for="item of list" :key='item.id'>
             <div class="item-img-wrapper">
                 <img class="item-img" :src='item.imgUrl' />
             </div>
@@ -18,26 +18,9 @@
 <script>
 export default {
     name:'HomeRecommend',
-    data () {
-        return {
-        recommendList:[{
-            id:'0001',
-            imgUrl: 'https://imgs.qunarzz.com/sight/p0/1608/2a/2a5b5a2bb256232ca3.img.jpg_200x200_a2c0555a.jpg',
-            title: "大连海洋世界",
-            desc:'浪漫大连首站，浪漫海洋主题乐园'
-        },{
-            id:'0002',
-            imgUrl: 'https://imgs.qunarzz.com/sight/p0/1608/2a/2a5b5a2bb256232ca3.img.jpg_200x200_a2c0555a.jpg',
-            title: "大连海洋世界",
-            desc:'浪漫大连首站，浪漫海洋主题乐园'
-        },{
-            id:'0003',
-            imgUrl: 'https://imgs.qunarzz.com/sight/p0/1608/2a/2a5b5a2bb256232ca3.img.jpg_200x200_a2c0555a.jpg',
-            title: "大连海洋世界",
-            desc:'浪漫大连首站，浪漫海洋主题乐园'
-        },]
-    }
-    }
+    props:{
+        list:Array
+    },
 }
 </script>
 <style lang="stylus" scoped>
